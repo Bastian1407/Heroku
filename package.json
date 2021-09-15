@@ -7,10 +7,6 @@
   "scripts": {
     "start": "node index.js"
   },
-    "formation": {
-    "web": {
-      "quantity": 1
-    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bastian1407/Heroku.git"
