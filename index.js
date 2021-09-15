@@ -16,30 +16,7 @@ function weatherFunction(city){
         .then((data) => {
           const weather ={temperature: data.main.temp, rain: data.main.humidity };
          let input= weather;
-            
-            //Create Connection
-amqp.connect('amqp://localhost', (connError, connection) =>{
-  if(connError){
-    throw connError;
-  }
-  //Create Channel
-  connection.createChannel((channelError, channel)=>{
-    if(channelError){
-      throw channelError;
-    }
-    //Assert Queue
-    const QUEUE = 'Wetterdaten'
-    channel.assertQueue(QUEUE);
-
-    
-    //Send message to queue
-    channel.sendToQueue(QUEUE,Buffer.from(JSON.stringify(input, null, 2)))
-    console.log('Message send %s',QUEUE);
-    console.log(input);
-        })
-  }).catch((error) => {
-    console.log('error', error);
-}); 
+            console.log(weather);
 })
 }
 
