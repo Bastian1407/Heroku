@@ -1,7 +1,8 @@
 {
   "name": "heroku",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ein Test für Heroku",
+  "engines":{ "node":"14.x"},
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
